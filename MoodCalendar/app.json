@@ -4,21 +4,34 @@
     "pages/logs/logs"
   ],
   "window":{
-    "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "MoodCalendarBar",
-    "navigationBarTextStyle":"black"
+    "backgroundColor": "#eeeeee",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#ffffff",
+    "navigationBarTitleText": "Mood Calendar",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
   },
   "tabBar":{
+    "selectedColor": "#11cc11",
     "list":[
       {
         "pagePath": "pages/index/index",
-        "text": "Home"
+        "text": "日记",
+        "iconPath": "images/Home.png",
+        "selectedIconPath": "images/Home_selected.png"
       }, 
       {
         "pagePath": "pages/logs/logs",
-        "text": "MyInfo"
+        "text": "我的",
+        "iconPath": "images/User.png",
+        "selectedIconPath": "images/User_selected.png"
       }
     ]
-  }
+  },
+  "networkTimeout":{
+    "uploadFile": 100000,
+    "downloadFile": 100000 
+  },
+  "debug": true
+
 }
