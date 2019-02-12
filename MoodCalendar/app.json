@@ -6,7 +6,19 @@
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
+    "navigationBarTitleText": "MoodCalendarBar",
     "navigationBarTextStyle":"black"
+  },
+  "tabBar":{
+    "list":[
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home"
+      }, 
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "MyInfo"
+      }
+    ]
   }
 }
