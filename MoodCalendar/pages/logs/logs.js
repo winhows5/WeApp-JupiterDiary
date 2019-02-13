@@ -11,5 +11,12 @@ Page({
         return util.formatTime(new Date(log))
       })
     })
+  },
+
+  onShareAppMessage: function (e) {
+    return {
+      title: '定制我的心情日历',
+      path: '/pages/index/index'
+    }
   }
 })

@@ -50,5 +50,13 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+
+  onShareAppMessage: function(e) {
+    return {
+      title: '定制我的心情日历',
+      path: '/pages/index/index'
+    }
   }
+
 })
