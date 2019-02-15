@@ -4,7 +4,26 @@ Page({
   data: {
     userInfo: {},
     hasUserInfo: false,
-    canIUse: wx.canIUse('button.open-type.getUserInfo')
+    canIUse: wx.canIUse('button.open-type.getUserInfo'),
+
+    list: [
+      {
+        id: 'content',
+        name: '基础内容',
+        open: false,
+        pages: ['text', 'icon', 'progress', 'rich-text']
+      },  {
+        id: 'map',
+        name: '地图',
+        open: false,
+        pages: ['map']
+      }, {
+        id: 'canvas',
+        name: '画布',
+        open: false,
+        pages: ['canvas']
+      }
+    ],
   },
 
   onLoad: function () {
@@ -43,4 +62,21 @@ Page({
       hasUserInfo: true
     })
   },
+
+  kindToggle(e) {
+    const id = e.currentTarget.id
+    const list = this.data.list
+    for (let i = 0, len = list.length; i < len; ++i) {
+      if (list[i].id === id) {
+        list[i].open = !list[i].open
+      } else {
+        list[i].open = false
+      }
+    }
+    this.setData({
+      list
+    })
+    wx.reportAnalytics('click_view_programmatically', {})
+  },
+
 })

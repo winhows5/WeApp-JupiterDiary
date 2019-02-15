@@ -1,3 +1,12 @@
+@import "/common/common.wxss";
+
+.weui-agree__link {
+  display: inline;
+  color: #586c94;
+}
+
+
+
 .userinfo {
   display: flex;
   flex-direction: column;
