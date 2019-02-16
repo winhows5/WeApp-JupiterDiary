@@ -8,16 +8,48 @@ Page({
 
     list: [
       {
-        id: 'content',
-        name: '基础内容',
+        id: 'readLog',
+        name: '查看日记',
+        open: false,
+        pages: [],
+      },
+      {
+        id: 'exportLog',
+        name: '导出日记',
+        open: false,
+        pages: [],
+      },
+      {
+        id: 'publishMethon',
+        name: '日记发布方式',
         open: false,
         pages: ['text', 'icon', 'progress', 'rich-text']
-      },  {
+      },  
+      {
+        id: 'lock',
+        name: '日记密码锁',
+        open: false,
+        pages: [],
+      },
+      {
+        id: 'reward',
+        name: '打赏产品',
+        open: false,
+        pages: [],
+      },
+      {
+        id: 'chatWithDeveloper',
+        name: '和开发者聊聊天',
+        open: false,
+        pages: [],
+      },
+      {
         id: 'map',
         name: '地图',
         open: false,
         pages: ['map']
-      }, {
+      }, 
+      {
         id: 'canvas',
         name: '画布',
         open: false,
