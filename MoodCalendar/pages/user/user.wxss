@@ -1,32 +1,47 @@
 @import "/common/common.wxss";
 
 
-
 .userinfo {
   display: flex;
+  width: 100%;
   flex-direction: column;
   align-items: center;
-  color: #111111;
+  padding: 50rpx 0rpx;
+  background-color: #dd6666;
 }
 
 .userinfo-avatar {
-  width: 128rpx;
-  height: 128rpx;
+  width: 180rpx;
+  height: 180rpx;
   margin: 20rpx;
+
   border-radius: 50%;
+  border: 10rpx;
+  border-style: solid;
+  border-color: #ffffff50;
+  
 }
 
 .userinfo-nickname {
-  color: #aaa;
+  color: #eeeeee;
 }
 
+page {
+  background-color: #dd6666;
+  height: 100%;
+  font-size: 32rpx;
+  line-height: 1.6;
+}
 
 .index-hd {
-  padding: 80rpx;
+  border-color: #dd6666;
+  padding: 0rpx;
   text-align: center;
 }
 .index-bd {
-  padding: 0 30rpx 40rpx;
+
+  background-color: #F8F8F8;
+  padding: 0rpx 0rpx 40rpx;
 }
 .index-ft {
   padding-bottom: 20rpx;
@@ -116,7 +131,6 @@
   padding: 30rpx;
   display: flex;
   align-items: center;
-
   transition: opacity .3s;
 }
 .kind-list-item-hd-show {

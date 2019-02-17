@@ -5,10 +5,11 @@
     "pages/user/user"
   ],
   "window":{
+
     "backgroundColor": "#eeeeee",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#ffffff",
-    "navigationBarTitleText": "Mood Calendar",
+    "navigationBarTitleText": "心情日记",
     "navigationBarTextStyle": "black",
     "enablePullDownRefresh": true
   },

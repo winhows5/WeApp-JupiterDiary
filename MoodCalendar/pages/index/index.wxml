@@ -2,7 +2,33 @@
 <view class="container">
   
 
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+<view class="index-bd">
+    <view class="kind-list">
+        <view class="kind-list-item">
+            <image class="kind-list-img" src="/images/Home_location.png"></image>
+            <view class="kind-list-text">{{location}}</view>
+            <image class="kind-list-img" src="/images/Home_weather.png"></image>
+            <view class="kind-list-text">{{weather}}</view> 
+        </view>
+    </view>
   </view>
+
+  <template is="head" data="{{title: 'textarea'}}"/>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="textarea-wrp">
+        <textarea bindblur="bindTextAreaBlur" auto-height />
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">记录你的心情</view>
+      <view class="textarea-wrp">
+        <textarea auto-focus="true" style="height: 3em" />
+      </view>
+    </view>
+  </view>
+
+  <template is="foot" />
 </view>
