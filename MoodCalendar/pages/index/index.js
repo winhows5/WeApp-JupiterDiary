@@ -1,8 +1,23 @@
 //index.js
-//获取应用实例
+var amapFile = require("../../libs/amap-wx.js");
+
 const app = getApp()
 
 Page({
+
+  onLoad: function () {
+    var that = this;
+    var myAmapFun = new amapFile.AMapWX({ key: 'b93928a4714fa2b9b7c88d6055956318' });
+    myAmapFun.getRegeo({
+      success: function (data) {
+        //成功回调
+      },
+      fail: function (info) {
+        //失败回调
+        console.log(info)
+      }
+    })
+  },
 
   //事件处理函数
   bindViewTap: function() {
@@ -19,7 +34,7 @@ Page({
     }
   },
 
-    onShow() {
+  onShow() {
     wx.reportAnalytics('enter_home_programmatically', {})
   },
   onShareAppMessage() {
