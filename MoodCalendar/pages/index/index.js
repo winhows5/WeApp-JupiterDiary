@@ -5,15 +5,22 @@ const app = getApp()
 
 Page({
 
+  data: {
+    location: "北京",
+    weather: "多云",
+  },
+  
+
   onLoad: function () {
     var that = this;
     var myAmapFun = new amapFile.AMapWX({ key: 'b93928a4714fa2b9b7c88d6055956318' });
-    myAmapFun.getRegeo({
+
+    myAmapFun.getWeather({
       success: function (data) {
-        //成功回调
+        console.log(data)
+
       },
       fail: function (info) {
-        //失败回调
         console.log(info)
       }
     })
@@ -44,11 +51,7 @@ Page({
     }
   },
 
-  data: {
-    location: "北京",
-    weather: "多云",
-    
-  },
+
 
   kindToggle(e) {
     const id = e.currentTarget.id

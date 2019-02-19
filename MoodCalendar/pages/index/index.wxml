@@ -13,8 +13,6 @@
     </view>
   </view>
 
-  <template is="head" data="{{title: 'textarea'}}"/>
-
   <view class="page-body">
     <view class="page-section">
       <view class="textarea-wrp">
@@ -30,5 +28,4 @@
     </view>
   </view>
 
-  <template is="foot" />
 </view>
