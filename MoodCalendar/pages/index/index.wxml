@@ -5,10 +5,21 @@
 <view class="index-bd">
     <view class="kind-list">
         <view class="kind-list-item">
+          <view class="kind-list-item-col">
             <image class="kind-list-img" src="/images/Home_location.png"></image>
-            <view class="kind-list-text">{{location}}</view>
+            <view class="kind-list-text">{{location.pro}}</view>
+            <view class="kind-list-text2">{{location.dis}}</view>
+          </view>
+          <view class="kind-list-item-col2">
+            <image class="kind-list-img" src="/images/Home_calendar.png"></image>
+            <view class="kind-list-text">{{date}}</view> 
+          </view>
+        </view>
+        <view class="kind-list-item">
             <image class="kind-list-img" src="/images/Home_weather.png"></image>
-            <view class="kind-list-text">{{weather}}</view> 
+            <view class="kind-list-text">{{weather.cli}}</view> 
+            <view class="kind-list-text">{{weather.tem}}</view>
+            <view class="kind-list-text4">{{weather.win}}</view>
         </view>
     </view>
   </view>
