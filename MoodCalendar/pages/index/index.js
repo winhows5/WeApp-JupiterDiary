@@ -27,18 +27,17 @@ Page({
     
     myAmapFun.getWeather({
       success: function (data) {
-        console.log(data.liveData);
         useData = data.liveData;
         that.setData({
           location: {
             pro: useData.province,
             dis: useData.city,
           },
-          date: useData.reporttime.substring(10),
+          date: useData.reporttime.substring(0,10),
           weather: {
             cli: useData.weather,
-            tem: useData.temperature + ' ℃',
-            win: useData.winddirection + '风 ' + useData.windpower + ' 级'
+            tem: useData.temperature + '℃',
+            win: useData.winddirection + '风 ' + useData.windpower + '级'
           }
         })
       },

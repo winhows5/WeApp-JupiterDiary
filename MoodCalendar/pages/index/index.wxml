@@ -27,14 +27,14 @@
   <view class="page-body">
     <view class="page-section">
       <view class="textarea-wrp">
-        <textarea bindblur="bindTextAreaBlur" auto-height />
+        <textarea class="textarea-title" bindblur="bindTextAreaBlur" auto-height />
       </view>
     </view>
 
     <view class="page-section">
       <view class="page-section-title">记录你的心情</view>
       <view class="textarea-wrp">
-        <textarea auto-focus="true" style="height: 3em" />
+        <textarea class="textarea-body" auto-focus="true" style="height: 3em" />
       </view>
     </view>
   </view>
