@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  
+
+<view class="index-bd">
+    <view class="kind-list">
+        <view class="kind-list-item">
+          <view class="kind-list-item-col">
+            <image class="kind-list-img" src="/images/Home_location.png"></image>
+            <view class="kind-list-text">{{location.pro}}</view>
+            <view class="kind-list-text2">{{location.dis}}</view>
+          </view>
+          <view class="kind-list-item-col2">
+            <image class="kind-list-img" src="/images/Home_calendar.png"></image>
+            <view class="kind-list-text">{{date}}</view> 
+          </view>
+        </view>
+        <view class="kind-list-item">
+            <image class="kind-list-img" src="/images/Home_weather.png"></image>
+            <view class="kind-list-text">{{weather.cli}}</view> 
+            <view class="kind-list-text">{{weather.tem}}</view>
+            <view class="kind-list-text4">{{weather.win}}</view>
+        </view>
+    </view>
+  </view>
+
+  <view class="page-body">
+    <view class="page-section">
+      <view class="textarea-wrp">
+        <textarea class="textarea-title" bindblur="bindTextAreaBlur" auto-height />
+      </view>
+    </view>
+
+    <view class="page-section">
+      <view class="page-section-title">记录你的心情</view>
+      <view class="textarea-wrp">
+        <textarea class="textarea-body" auto-focus="true" style="height: 3em" />
+      </view>
+    </view>
+  </view>
+
+</view>
