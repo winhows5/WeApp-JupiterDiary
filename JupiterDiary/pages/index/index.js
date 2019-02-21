@@ -1,7 +1,7 @@
 //index.js
 var amapFile = require("../../libs/amap-wx.js");
-
 var utils = require("../../utils/util.js")
+const images = require("../../common/Home_back_image.js")
 const app = getApp()
 
 Page({
@@ -16,7 +16,9 @@ Page({
       cli: "木星风暴",
       tem: "-85℃",
       win: "西北风 7级",
-    }          
+    },
+
+    images: images,          
   },
   
 
@@ -24,7 +26,7 @@ Page({
     var that = this;
     var useData;
     var myAmapFun = new amapFile.AMapWX({ key: 'b93928a4714fa2b9b7c88d6055956318' });
-    
+
     myAmapFun.getWeather({
       success: function (data) {
         useData = data.liveData;
