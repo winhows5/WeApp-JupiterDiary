@@ -43,19 +43,6 @@ page {
   background-color: #F8F8F8;
   padding: 0rpx 0rpx 40rpx;
 }
-.index-ft {
-  padding-bottom: 20rpx;
-  text-align: center;
-}
-.index-logo {
-  width: 86rpx;
-  height: 86rpx;
-}
-.index-desc {
-  margin-top: 20rpx;
-  color: #888888;
-  font-size: 28rpx;
-}
 
 
 .navigator-box {
@@ -120,12 +107,23 @@ page {
   border-radius: 4rpx;
   overflow: hidden;
 }
+
 .kind-list-item:first-child {
   margin-top: 0;
 }
+
+
 .kind-list-text{
   flex: 1;
 }
+.kind-list-item-arrow {
+  width: 50rpx;
+  height: 50rpx;
+  padding-right: 10rpx;
+  position: relative;
+}
+
+
 
 .kind-list-item-hd {
   padding: 30rpx;

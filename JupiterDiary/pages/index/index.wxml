@@ -1,10 +1,9 @@
 <!--index.wxml-->
-<view class="container">
+<view class="container" >
   
-
-<view class="index-bd">
-    <view class="kind-list">
-        <view class="kind-list-item">
+  <view class="index-hd">
+    <view class="kind-list" >
+        <view class="kind-list-item" >
           <view class="kind-list-item-col">
             <image class="kind-list-img" src="/images/Home_location.png"></image>
             <view class="kind-list-text">{{location.pro}}</view>
@@ -24,19 +23,21 @@
     </view>
   </view>
 
-  <view class="page-body">
+  <view class="index-bd" >
+    
     <view class="page-section">
-      <view class="textarea-wrp">
-        <textarea class="textarea-title" bindblur="bindTextAreaBlur" auto-height />
+      <!--view class="page-section-title">记录你的心情</view-->
+      <view class="textarea-wrp-title">
+        <textarea class="textarea-title"  style="height: 30rpx;background-image: url({{}})" placeholder="今日"/>
       </view>
     </view>
 
     <view class="page-section">
-      <view class="page-section-title">记录你的心情</view>
-      <view class="textarea-wrp">
-        <textarea class="textarea-body"  auto-focus="true" style="height: 1000rpx;background-image: url({{images.ahoy}})" />
+      <view class="textarea-wrp-body">
+        <textarea class="textarea-body" auto-focus="true" bindblur="bindTextAreaBlur" auto-height placeholder="开始记录你的心情"/>
       </view>
     </view>
+
   </view>
 
 </view>
