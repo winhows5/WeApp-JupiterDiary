@@ -13,6 +13,14 @@
   
   <view class="index-bd">
     <view class="kind-list">
+
+      <view class="kind-list-item" style='background-color:#123321'>
+          <view class="kind-list-search">
+            <image class="kind-list-item-arrow" src="../../images/User_Search.png" />
+            <input class="kind-list-search-text">搜索</input>
+          </view>
+      </view>
+
       <block wx:for-items="{{list}}" wx:key="{{item.id}}">
         <view class="kind-list-item">
           <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
