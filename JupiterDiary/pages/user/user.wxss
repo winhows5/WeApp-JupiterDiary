@@ -127,9 +127,16 @@ page {
   display: flex;
   align-items: center;
   margin: 25rpx 40rpx;
-  background-color: #666666;
+  background-color: #eaeaea;
+  border-radius: 10rpx;
 }
 
+.kind-list-search-image {
+  width: 40rpx;
+  height: 40rpx;
+  padding-left: 15rpx;
+  position: relative;
+}
 
 .kind-list-item-hd {
   padding: 30rpx;

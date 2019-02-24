@@ -14,10 +14,10 @@
   <view class="index-bd">
     <view class="kind-list">
 
-      <view class="kind-list-item" style='background-color:#123321'>
+      <view class="kind-list-item">
           <view class="kind-list-search">
-            <image class="kind-list-item-arrow" src="../../images/User_Search.png" />
-            <input class="kind-list-search-text">搜索</input>
+            <image class="kind-list-search-image" src="../../images/User_Search.png" />
+            <input class="kind-list-search-text" placeholder='搜索日记标签试一下' placeholder-style='text-align: center; font-size: 28rpx'></input>
           </view>
       </view>
 
