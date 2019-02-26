@@ -102,7 +102,15 @@ page {
 
 
 .kind-list-item {
-  margin: 20rpx 0;
+  margin: 20rpx 0 0 0;
+  background-color: #FFFFFF;
+  border-radius: 4rpx;
+  overflow: hidden;
+
+}
+
+.kind-list-item-even {
+  margin: 0 0 0 0;
   background-color: #FFFFFF;
   border-radius: 4rpx;
   overflow: hidden;
@@ -112,13 +120,19 @@ page {
   margin-top: 0;
 }
 
-
 .kind-list-text{
   flex: 1;
 }
+.kind-list-info{
+  padding-right: 10rpx;
+  flex: 1;
+  text-align: right;
+  color:#888888;
+}
+
 .kind-list-item-arrow {
-  width: 50rpx;
-  height: 50rpx;
+  width: 35rpx;
+  height: 35rpx;
   padding-right: 10rpx;
   position: relative;
 }

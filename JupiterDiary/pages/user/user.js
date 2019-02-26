@@ -9,52 +9,61 @@ Page({
 
     list: [
       {
-        id: 'readLog',
-        name: '查看日记',
-        open: false,
-        pages: [],
+        id: 'baseOp',
+        odd: {
+          id: 'readLog',
+          name: '查看日记',
+          open: false,
+          useArrow: true,
+          info: '',
+          pages: [],
+          },
+        even: {
+          id: 'exportLog',
+          name: '导出日记',
+          open: false,
+          useArrow: true,
+          info: '随时导出，不怕丢失',
+          pages: ['txt', 'word'],
+        },
       },
       {
-        id: 'exportLog',
-        name: '导出日记',
-        open: false,
-        pages: [],
+        id: 'privateOp',
+        odd: {
+          id: 'publishMethod',
+          name: '日记发布方式',
+          open: false, 
+          useArrow: true,
+          info: '匿名发布',
+          pages: ['匿名发布', '微信名发布', '自定义名发布']
+        },  
+        even: {
+          id: 'lock',
+          name: '日记密码锁',
+          open: false,
+          useArrow: false,
+          info: '',
+          pages: [],
+        },
       },
       {
-        id: 'publishMethon',
-        name: '日记发布方式',
-        open: false,
-        pages: ['text', 'icon', 'progress', 'rich-text']
-      },  
-      {
-        id: 'lock',
-        name: '日记密码锁',
-        open: false,
-        pages: [],
-      },
-      {
-        id: 'reward',
-        name: '打赏产品',
-        open: false,
-        pages: [],
-      },
-      {
-        id: 'chatWithDeveloper',
-        name: '和开发者聊聊天',
-        open: false,
-        pages: [],
-      },
-      {
-        id: 'map',
-        name: '地图',
-        open: false,
-        pages: ['map']
-      }, 
-      {
-        id: 'canvas',
-        name: '画布',
-        open: false,
-        pages: ['canvas']
+        id: 'rewardOp',
+        odd: {
+          id: 'reward',
+          name: '打赏产品',
+          open: false,
+          useArrow: true,
+          info: '',
+          pages: [],
+        },
+        even: {
+          id: 'chatWithDeveloper',
+          name: '和开发者聊聊天',
+          open: false,
+          useArrow: true,
+          info: '',
+          pages: [],
+        },
       }
     ],
   },
@@ -100,16 +109,23 @@ Page({
     const id = e.currentTarget.id
     const list = this.data.list
     for (let i = 0, len = list.length; i < len; ++i) {
-      if (list[i].id === id) {
-        list[i].open = !list[i].open
+      if (list[i].odd.id === id) {
+        list[i].odd.open = !list[i].odd.open
+      } else if (list[i].even.id === id) {
+        list[i].even.open = !list[i].even.open
       } else {
-        list[i].open = false
+        list[i].odd.open = false
+        list[i].even.open = false
       }
     }
     this.setData({
       list
     })
     wx.reportAnalytics('click_view_programmatically', {})
+  },
+
+  switchChange(e) {
+    console.log('switch 发生 change 事件，携带值为', e.detail.value)
   },
 
 })

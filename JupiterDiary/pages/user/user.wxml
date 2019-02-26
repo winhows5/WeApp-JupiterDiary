@@ -23,13 +23,34 @@
 
       <block wx:for-items="{{list}}" wx:key="{{item.id}}">
         <view class="kind-list-item">
-          <view id="{{item.id}}" class="kind-list-item-hd {{item.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
-            <view class="kind-list-text">{{item.name}}</view>
-            <image class="kind-list-item-arrow" src="../../images/User_RightArrow.png" />
+          <view id="{{item.odd.id}}" class="kind-list-item-hd {{item.odd.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
+            <view class="kind-list-text">{{item.odd.name}}</view>
+            <view class="kind-list-info">{{item.odd.info}}</view>
+            <image class="kind-list-item-arrow" src="../../images/User_RightArrow.png" style="display: {{item.odd.useArrow ? 'inline' : 'none'}}"/>
+            <switch bindchange="switchChange" style="display: {{item.odd.useArrow ? 'none' : 'inline'}}"/>
           </view>
-          <view class="kind-list-item-bd {{item.open ? 'kind-list-item-bd-show' : ''}}">
-            <view class="navigator-box {{item.open ? 'navigator-box-show' : ''}}">
-              <block wx:for-items="{{item.pages}}" wx:for-item="page" wx:key="*item">
+          <view class="kind-list-item-bd {{item.odd.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.odd.open ? 'navigator-box-show' : ''}}">
+              <block wx:for-items="{{item.odd.pages}}" wx:for-item="page" wx:key="*item">
+                <navigator url="pages/{{page}}/{{page}}" class="navigator">
+                  <view class="navigator-text">{{page}}</view>
+                  <view class="navigator-arrow"></view>
+                </navigator>
+              </block>
+            </view>
+          </view>
+        </view>
+
+        <view class="kind-list-item-even">
+          <view id="{{item.even.id}}" class="kind-list-item-hd {{item.even.open ? 'kind-list-item-hd-show' : ''}}" bindtap="{{item.even.useArrow ? 'kindToggle' : ''}}">
+            <view class="kind-list-text">{{item.even.name}}</view>
+            <view class="kind-list-info">{{item.even.info}}</view>
+            <image class="kind-list-item-arrow" src="../../images/User_RightArrow.png" style="display: {{item.even.useArrow ? 'inline' : 'none'}}"/>
+            <switch bindchange="switchChange" style="display: {{item.even.useArrow ? 'none' : 'inline'}}"/>
+          </view>
+          <view class="kind-list-item-bd {{item.even.open ? 'kind-list-item-bd-show' : ''}}">
+            <view class="navigator-box {{item.even.open ? 'navigator-box-show' : ''}}">
+              <block wx:for-items="{{item.even.pages}}" wx:for-item="page" wx:key="*item">
                 <navigator url="pages/{{page}}/{{page}}" class="navigator">
                   <view class="navigator-text">{{page}}</view>
                   <view class="navigator-arrow"></view>
