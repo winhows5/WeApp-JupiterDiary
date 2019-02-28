@@ -3,6 +3,10 @@
 App({
   onLaunch: function () {
     
+    wx.cloud.init({
+      env: 'jupiterdiary-db'
+    })
+
     // 展示本地存储能力
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
