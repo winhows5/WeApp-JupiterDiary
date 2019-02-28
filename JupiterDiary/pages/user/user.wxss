@@ -137,6 +137,13 @@ page {
   position: relative;
 }
 
+.kind-list-item-chat {
+  width: 65rpx;
+  height: 65rpx;
+  padding-right: 10rpx;
+  position: relative;
+}
+
 .kind-list-search {
   display: flex;
   align-items: center;

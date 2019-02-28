@@ -26,8 +26,8 @@
           <view id="{{item.odd.id}}" class="kind-list-item-hd {{item.odd.open ? 'kind-list-item-hd-show' : ''}}" bindtap="kindToggle">
             <view class="kind-list-text">{{item.odd.name}}</view>
             <view class="kind-list-info">{{item.odd.info}}</view>
-            <image class="kind-list-item-arrow" src="../../images/User_RightArrow.png" style="display: {{item.odd.useArrow ? 'inline' : 'none'}}"/>
-            <switch bindchange="switchChange" style="display: {{item.odd.useArrow ? 'none' : 'inline'}}"/>
+            <image class="{{item.odd.useArrow ? 'kind-list-item-arrow' : 'kind-list-item-chat'}}" src="{{item.odd.useArrow ? '../../images/User_RightArrow.png' : '../../images/User_Chat.png'}}" style="display: {{item.odd.useImage ? 'inline' : 'none'}}"/>
+            <switch bindchange="switchChange" style="display: {{item.odd.useImage ? 'none' : 'inline'}}"/>
           </view>
           <view class="kind-list-item-bd {{item.odd.open ? 'kind-list-item-bd-show' : ''}}">
             <view class="navigator-box {{item.odd.open ? 'navigator-box-show' : ''}}">
@@ -42,11 +42,11 @@
         </view>
 
         <view class="kind-list-item-even">
-          <view id="{{item.even.id}}" class="kind-list-item-hd {{item.even.open ? 'kind-list-item-hd-show' : ''}}" bindtap="{{item.even.useArrow ? 'kindToggle' : ''}}">
+          <view id="{{item.even.id}}" class="kind-list-item-hd {{item.even.open ? 'kind-list-item-hd-show' : ''}}" bindtap="{{item.even.useImage ? 'kindToggle' : ''}}">
             <view class="kind-list-text">{{item.even.name}}</view>
             <view class="kind-list-info">{{item.even.info}}</view>
-            <image class="kind-list-item-arrow" src="../../images/User_RightArrow.png" style="display: {{item.even.useArrow ? 'inline' : 'none'}}"/>
-            <switch bindchange="switchChange" style="display: {{item.even.useArrow ? 'none' : 'inline'}}"/>
+            <image class="{{item.even.useArrow ? 'kind-list-item-arrow' : 'kind-list-item-chat'}}" src="{{item.even.useArrow ? '../../images/User_RightArrow.png' : '../../images/User_Chat.png'}}" style="display: {{item.even.useImage ? 'inline' : 'none'}}"/>
+            <switch bindchange="switchChange" style="display: {{item.even.useImage ? 'none' : 'inline'}}"/>
           </view>
           <view class="kind-list-item-bd {{item.even.open ? 'kind-list-item-bd-show' : ''}}">
             <view class="navigator-box {{item.even.open ? 'navigator-box-show' : ''}}">
