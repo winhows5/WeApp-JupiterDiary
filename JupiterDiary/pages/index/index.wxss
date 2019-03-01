@@ -72,7 +72,7 @@ textarea {
 .kind-list-item-col2 {
   display: flex;
   align-items: center;
-  flex: 0.5;
+  flex: 0.7;
 }
 
 .kind-list-text{
@@ -80,13 +80,34 @@ textarea {
   flex: 1;
 }
 .kind-list-text2{
-  margin-left: 20rpx;
+  margin-left: 10rpx;
   flex: 2;
 }
-.kind-list-text4{
-  margin-left: 20rpx;
-  flex: 4;
+.kind-list-text3{
+  margin-left: 10rpx;
+  flex: 3;
 }
+
+.kind-list-item-save{
+  margin: 0 0rpx;
+  flex: 1;
+  background-color: #dd6666;
+  border-radius: 5rpx;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.kind-list-item-repost{
+  margin: 0 10rpx;
+  flex: 1;
+  background-color: #66dd66;
+  border-radius: 5rpx;
+  color: #FFFFFF;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
 .kind-list-img {
   width: 40rpx;
   height: 40rpx;

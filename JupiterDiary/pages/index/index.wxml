@@ -1,40 +1,46 @@
 <!--index.wxml-->
-<view class="container" >
-  
+<view class="container">
+
   <view class="index-hd">
-    <view class="kind-list" >
-        <view class="kind-list-item" >
-          <view class="kind-list-item-col">
-            <image class="kind-list-img" src="/images/Home_location.png"></image>
-            <view class="kind-list-text">{{location.pro}}</view>
-            <view class="kind-list-text2">{{location.dis}}</view>
-          </view>
-          <view class="kind-list-item-col2">
-            <image class="kind-list-img" src="/images/Home_calendar.png"></image>
-            <view class="kind-list-text">{{date}}</view> 
-          </view>
+    <view class="kind-list">
+      <view class="kind-list-item">
+        <view class="kind-list-item-col">
+          <image class="kind-list-img" src="/images/Home_location.png"></image>
+          <view class="kind-list-text">{{location.pro}}</view>
+          <view class="kind-list-text2">{{location.dis}}</view>
         </view>
-        <view class="kind-list-item">
-            <image class="kind-list-img" src="/images/Home_weather.png"></image>
-            <view class="kind-list-text">{{weather.cli}}</view> 
-            <view class="kind-list-text">{{weather.tem}}</view>
-            <view class="kind-list-text4">{{weather.win}}</view>
+        <view class="kind-list-item-col2">
+          <image class="kind-list-img" src="/images/Home_calendar.png"></image>
+          <view class="kind-list-text">{{date}}</view>
         </view>
+      </view>
+      <view class="kind-list-item">
+        <view class="kind-list-item-col">
+          <image class="kind-list-img" src="/images/Home_weather.png"></image>
+          <view class="kind-list-text">{{weather.cli}}</view>
+          <view class="kind-list-text">{{weather.tem}}</view>
+          <view class="kind-list-text3">{{weather.win}}</view>
+        </view>
+        <view class="kind-list-item-col2">
+          <view class="kind-list-item-save" >保存</view>
+          <view class="kind-list-item-repost">转发</view>
+        </view>
+      </view>
     </view>
   </view>
 
-  <view class="index-bd" >
-    
+  <view class="index-bd">
+
     <view class="page-section">
       <!--view class="page-section-title">记录你的心情</view-->
       <view class="textarea-wrp-title">
-        <textarea class="textarea-title"  style="height: 30rpx;background-image: url({{}})" placeholder="今日"/>
+        <textarea class="textarea-title" style="height: 30rpx;background-image: url({{}})" placeholder="今日" />
       </view>
     </view>
 
     <view class="page-section">
       <view class="textarea-wrp-body">
-        <textarea class="textarea-body" auto-focus="true" bindblur="bindTextAreaBlur" auto-height placeholder="开始记录你的心情"/>
+        <textarea class="textarea-body" auto-focus="true" bindblur="bindTextAreaBlur" auto-height placeholder="开始记录你的心情" />
       </view>
     </view>
 
