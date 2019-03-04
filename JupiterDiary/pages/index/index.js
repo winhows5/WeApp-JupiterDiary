@@ -1,7 +1,7 @@
 //index.js
 var amapFile = require("../../libs/amap-wx.js");
 var utils = require("../../utils/util.js")
-const images = require("../../common/Home_back_image.js")
+const image = require("../../common/Home_back_image.js")
 const app = getApp()
 
 Page({
@@ -17,10 +17,16 @@ Page({
       tem: "-85℃",
       win: "西北风 7级",
     },
+    title: "",
+    content: "",
 
-    images: images,          
+    images: image,     
+
   },
   
+  // amap Web API key: a01576d41854756628caf9e540881f2b
+  // amap WX key: b93928a4714fa2b9b7c88d6055956318
+
 
   onLoad: function () {
     var that = this;
