@@ -7,7 +7,7 @@
         <view class="kind-list-item-col">
           <image class="kind-list-img" src="/images/Home_location.png"></image>
           <view class="kind-list-text">{{location.pro}}
-            <image />
+
           </view>
           <view class="kind-list-text2">{{location.dis}}</view>
         </view>
