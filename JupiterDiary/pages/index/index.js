@@ -22,6 +22,8 @@ Page({
 
     images: image,     
 
+    region: ['广东省', '广州市', '海珠区'],
+    customItem: '全部'
   },
   
   // amap Web API key: a01576d41854756628caf9e540881f2b
